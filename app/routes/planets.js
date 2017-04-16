@@ -9,7 +9,7 @@ router.get(API ==='swapi' ? '/planets' : '/cars', function(req, res) {
 
     if (API === 'swapi') { /*SWAPI  data*/
         data.results.forEach(function(item) {
-            info += '<li><h2>' + item.name + '</h2><p>' + item.population + '</p></li>';
+            info += `<li><h1>${item.name}</h1><img src="images/planets/${item.name}.jpg"><p>${item.population}</p></li>`;
         });
     } else if(API === 'edmunds') { /*/!************ Edmunds data *******************!/*/
         data.makes.forEach(function(item) {
@@ -30,6 +30,7 @@ router.get('/planets/:planetid',function(req, res) {
 
     res.send(`
                    <h1>${planet.name}</h1>
+                   <img src="../images/planets/${planet.name}.jpg">
                    <p>${planet.url}</p>
                 `);
 });

@@ -16,7 +16,7 @@ request(url, function(err, resp, body) {
     console.log(data);
 
         /******** Set Site Urls **********/
-
+        app.use(express.static('app/public'));
         app.use(require('./routes/index'));
         app.use(require('./routes/planets'));
 
