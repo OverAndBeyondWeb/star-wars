@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <div>
+        <% planets.forEach(function(item) {%>
+            <% if (item.name == planet ) { %>
+                <% console.log(item.name + ',' + planet); %>
+                <h1>U have landed on <%= item.name %></h1>
+                <img src="/images/planets/<%= item.name %>.jpg">
+                <li>diameter: <%= item.diameter %></li>
+                <li>climate: <%= item.climate %></li>
+                <li>gravity: <%= item.gravity %></li>
+                <li>terrain: <%= item.terrain %></li>
+                <li>population: <%= item.population %></li>
+                <li>surface water: <%= item.surface_water %></li>
+        <% } %>
+        <% }); %>
+    </div>
+
+</body>
+</html>

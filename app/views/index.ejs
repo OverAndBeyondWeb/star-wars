@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <% include partials/template/head.ejs %>
+</head>
+<body id="<%= theID %>">
+
+    <header></header>
+    <nav>
+        <ul>
+            <li><a href="/planets">Planets</a></li>
+            <li>Option 2</li>
+            <li>Option 3</li>
+        </ul>
+    </nav>
+    <section class="introduction wrap">
+        <h1>Welcom to the site!</h1>
+        <p>Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Vivamus suscipit tortor eget felis porttitor volutpat.
+            Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula.
+            Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit
+            neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Donec rutrum congue leo eget malesuada. Sed porttitor lectus nibh. Nulla porttitor accumsan tincidunt.
+            Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Vivamus suscipit tortor eget felis porttitor volutpat.</p>
+    </section>
+
+    <main>
+        <section class="content wrap">
+            <article class="main-content">
+                <h2>Enjoy our work</h2>
+                <p>Donec sollicitudin molestie malesuada. Nulla porttitor accumsan tincidunt.
+                    Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
+                    Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Lorem ipsum
+                    dolor sit amet, consectetur adipiscing elit. Mauris blandit aliquet elit, eget tincidunt
+                    nibh pulvinar a.</p>
+                <p>Donec sollicitudin molestie malesuada. Nulla porttitor accumsan tincidunt.
+                    Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
+                    Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Lorem ipsum
+                    dolor sit amet, consectetur adipiscing elit. Mauris blandit aliquet elit, eget tincidunt
+                    nibh pulvinar a.</p>
+                <p>Donec sollicitudin molestie malesuada. Nulla porttitor accumsan tincidunt.
+                    Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
+                    Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Lorem ipsum
+                    dolor sit amet, consectetur adipiscing elit. Mauris blandit aliquet elit, eget tincidunt
+                    nibh pulvinar a.</p>
+            </article>
+
+            <aside class="pics">
+                <h2>Check out our pics</h2>
+                <% planets.forEach(function(planet) { %>
+                    <div><img src="/images/planets/<%= planet.name %>.jpg"></div>
+                <% }); %>
+
+            </aside>
+        </section>
+    </main>
+    <div class="clearfix"></div>
+    <footer></footer>
+
+
+    <script>
+        console.log();
+    </script>
+    <!--<script src="/reload/reload.js"></script>-->
+</body>
+</html>

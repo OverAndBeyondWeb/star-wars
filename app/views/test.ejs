@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <% include partials/template/head.ejs %>
+</head>
+<body>
+    <h1>this is a test</h1>
+    <div>another one <% planets.forEach(function(item) { %>
+            <div><%= item.name %></div>
+      <%  }) %>
+
+
+
+
+    <script src="/reload/reload.js"></script>
+</body>
+</html>

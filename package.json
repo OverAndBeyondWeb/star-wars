@@ -4,12 +4,20 @@
   "description": "display car data from edmunds.com",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "node-sass -o app/public/css app/public/scss/main.scss",
+    "start": "nodemon app/app.js --ext js,ejs,scss --watch app"
   },
   "author": "Juan Fox",
   "license": "ISC",
   "dependencies": {
+    "ejs": "^2.5.6",
     "express": "^4.15.2",
     "request": "^2.81.0"
+  },
+  "devDependencies": {
+    "node-sass": "^4.5.2",
+    "nodemon": "^1.11.0",
+    "reload": "^1.1.2"
   }
 }

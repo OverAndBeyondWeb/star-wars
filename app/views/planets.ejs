@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Here go the planets</h1>
+    <% planets.forEach(function(item) { %>
+        <li><a href="planets/<%= item.name%>"><h1><%= item.name %></h1><img src="images/planets/<%= item.name %>.jpg"><p><%= item.population %></p</a>></li>;
+    <% }); %>
+
+    <script></script>
+</body>
+</html>
